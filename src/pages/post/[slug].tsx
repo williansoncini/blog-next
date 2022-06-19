@@ -1,4 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
+import { Post } from '../../containers/post/index';
 import { getAllPosts } from '../../data/posts/getAllPosts';
 import { getPost } from '../../data/posts/getPost';
 import { PostData } from '../../domain/posts/posts';
@@ -8,12 +9,7 @@ export type DynamicPostProps = {
 };
 
 const DynamicPost = ({ post }: DynamicPostProps) => {
-  return (
-    <>
-      <p>{post.attributes.title}</p>
-      <div dangerouslySetInnerHTML={{ __html: post.attributes.content }} />
-    </>
-  );
+  return <Post post={post} />;
 };
 
 export default DynamicPost;

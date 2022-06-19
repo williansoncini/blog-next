@@ -6,5 +6,5 @@ export type MainContainerProps = {
 };
 
 export const MainContainer = ({ children }: MainContainerProps) => {
-  return <Styled.MainContainer>{children}</Styled.MainContainer>;
+  return <Styled.Container>{children}</Styled.Container>;
 };
