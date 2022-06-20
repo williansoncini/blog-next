@@ -1,5 +1,4 @@
 import React from 'react';
-import { MainContainer } from '../MainContainer/index';
 import * as Styled from './styled';
 
 export type PostCoverProps = {
