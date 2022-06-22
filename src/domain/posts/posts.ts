@@ -3,6 +3,10 @@ export type PostData = {
   attributes: PostAttributes;
 };
 
+export type PostAuthorData = {
+  data: PostAuthorAttributes;
+};
+
 export type PostAuthorAttributes = {
   id: number;
   attributes: PostAuthor;
@@ -15,6 +19,10 @@ export type PostAuthor = {
   updatedBy: number;
   createdAt: string;
   updated_at: string;
+};
+
+export type PostCategoryData = {
+  data: PostCategoryAttributes;
 };
 
 export type PostCategoryAttributes = {
@@ -86,8 +94,8 @@ export type PostAttributes = {
   title: string;
   content: string;
   slug: string;
-  author: PostAuthorAttributes;
-  category: PostCategoryAttributes;
+  author: PostAuthorData;
+  category: PostCategoryData;
   createdBy: PostCreatedBy;
   updatedBy: PostCreatedBy;
   createdAt: string;

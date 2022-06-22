@@ -15,7 +15,7 @@ export const PostDetail = ({
 }: PostDetailProps) => {
   return (
     <Styled.Container>
-      Publicado em <PostDate date={date} />
+      Publicado em <PostDate date={date} /> por {author} | {category}
     </Styled.Container>
   );
 };
