@@ -1,6 +1,7 @@
 import React from 'react';
 import { PostDate } from '../PostDate/index';
 import * as Styled from './styled';
+import Link from 'next/link';
 
 export type PostDetailProps = {
   date: string;
@@ -15,7 +16,8 @@ export const PostDetail = ({
 }: PostDetailProps) => {
   return (
     <Styled.Container>
-      Publicado em <PostDate date={date} /> por {author} | {category}
+      Publicado em <PostDate date={date} /> por {author}.{' | '}
+      <Link href={`/categories/${category}`}>{category}</Link>
     </Styled.Container>
   );
 };
